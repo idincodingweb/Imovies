@@ -1,0 +1,47 @@
+html, body {
+  background: linear-gradient(to right, #4a00e0, #8e2de2, #ec38bc);
+  color: white;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Button */
+.button-primary {
+  background-color: #FF914D;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #FF7A33;
+}
+
+.button-secondary {
+  background-color: #4CAF93;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-secondary:hover {
+  background-color: #3A9274;
+}
+
+/* Card */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}

@@ -1,0 +1,65 @@
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://images.pexels.com/photos/30057593/pexels-photo-30057593/free-photo-of-adegan-set-film-malam-hari-dengan-mobil-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center;
+  background-size: cover;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 1rem 0;
+}
+
+.movie-title {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.movie-details {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.action-buttons .btn {
+  padding: 0.75rem 2rem;
+}
+
+.pagination span {
+  margin-right: 1rem;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  opacity: 1;
+  color: #dc3545;
+}
+
+.active {
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  
+  .movie-title {
+    text-align: left;
+    padding: 4rem 0;
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+  }
+  
+  .action-buttons .btn {
+    padding: 0.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,29 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  
+  background-color: transparent;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: white !important;
+  margin: 0 1rem;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Media query untuk layar mobile */
+@media (max-width: 768px) {
+ .navbar {
+  position: fixed;
+  background-color: #1f1f1f;
+}
+}

@@ -1,0 +1,145 @@
+.coming-soon-container {
+  background-color: #000;
+  color: white;
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.movies-scroll-container {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.movies-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.movie-card {
+  min-width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-poster img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.release-date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #dc3545;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.movie-info {
+  padding: 1rem 0;
+}
+
+.movie-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.movie-details .divider {
+  margin: 0 0.5rem;
+}
+
+.scroll-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(220, 53, 69, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  pointer-events: auto;
+}
+
+.scroll-button:hover {
+  background: rgba(220, 53, 69, 1);
+}
+
+.scroll-left {
+  left: -20px;
+}
+
+.scroll-right {
+  right: -20px;
+}
+
+/* ComingSoon.css */
+
+a {
+  text-decoration: none; /* Hilangkan garis bawah pada tautan */
+  color: inherit; /* Warna teks tautan mengikuti warna teks elemen induk */
+}
+
+.movie-card {
+  list-style: none; /* Hilangkan list-style pada .movie-card */
+  display: block; /* Pastikan .movie-card ditampilkan sebagai blok */
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    min-width: 180px;
+  }
+  
+  .scroll-button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .scroll-left {
+    left: 0;
+  }
+  
+  .scroll-right {
+    right: 0;
+  }
+}

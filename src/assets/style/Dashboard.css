@@ -1,0 +1,231 @@
+/* ProfileDashboard.css */
+.dashboard-container {
+  background-color: #000000;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Sidebar Styles */
+.dashboard-sidebar {
+  background-color: #111111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff0000;
+}
+
+.image-upload-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ff0000;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-upload-overlay:hover {
+  transform: scale(1.1);
+}
+
+.upload-btn {
+  color: white;
+  cursor: pointer;
+}
+
+/* Stats Section */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stat-item {
+  padding: 10px;
+  background-color: #222222;
+  border-radius: 8px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Main Content Styles */
+.dashboard-content {
+  background-color: #111111;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.content-header h2 {
+  color: #ff0000;
+  margin: 0;
+}
+
+.edit-btn {
+  background-color: transparent;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+/* Form Styles */
+.profile-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff0000;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  background-color: #222222;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  color: white;
+}
+
+.form-control:disabled {
+  background-color: #1a1a1a;
+  cursor: not-allowed;
+}
+
+.save-btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Recent Activity Styles */
+.recent-activity {
+  margin-top: 30px;
+}
+
+.recent-activity h3 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #222222;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  transform: translateX(5px);
+  background-color: #2a2a2a;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.activity-content p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.activity-time {
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .dashboard-sidebar {
+    margin-bottom: 30px;
+  }
+  
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .activity-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

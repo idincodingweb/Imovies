@@ -1,0 +1,139 @@
+.movie-list-container {
+  background-color: #000;
+  color: white;
+  padding: 2rem 0;
+}
+
+.movie-header {
+  margin-bottom: 2rem;
+}
+
+.movie-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-filters {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.movie-filters::-webkit-scrollbar {
+  height: 4px;
+}
+
+.movie-filters::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.movie-filters::-webkit-scrollbar-thumb {
+  background: #dc3545;
+}
+
+.movie-filters .btn {
+  min-width: 100px;
+  padding: 0.5rem 1.5rem;
+}
+
+.movie-grid-container {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.movie-grid-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.movie-grid-container::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.movie-grid-container::-webkit-scrollbar-thumb {
+  background: #dc3545;
+}
+
+.movie-grid {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.movie-card {
+  min-width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-poster img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.movie-info {
+  padding: 1rem 0;
+}
+
+.movie-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.movie-details .divider {
+  margin: 0 0.5rem;
+}
+
+.more-link {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.more-link:hover {
+  color: #bb2d3b;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    min-width: 180px;
+  }
+  
+  .movie-filters .btn {
+    min-width: 80px;
+    padding: 0.5rem 1rem;
+  }
+}
