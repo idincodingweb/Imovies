@@ -3,13 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import axios from '../api/datafilm';
 import requests from '../api/requests';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { auth, onAuthStateChanged } from '../firebaseConfig'; // Import Firebase auth
 import '../assets/style/News.css';
 
 const News = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [newsItems, setNewsItems] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,25 +23,8 @@ const News = () => {
     fetchNews();
   }, []);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
-
   const handleCardClick = (newsId) => {
-    if (!isLoggedIn) {
-      navigate('/login');
-    } else {
-      navigate(`/detailmovie/${newsId}`);
-    }
+    navigate(`/detailmovie/${newsId}`);
   };
 
   const nextSlide = () => {
