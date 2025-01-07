@@ -1,16 +1,13 @@
-// ComingSoon.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import axios from '../api/datafilm';
 import requests from '../api/requests';
-import { auth, onAuthStateChanged } from '../firebaseConfig'; // Import Firebase auth
 import '../assets/style/ComingSoon.css';
 
 const ComingSoon = () => {
   const scrollContainerRef = useRef(null);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,25 +23,8 @@ const ComingSoon = () => {
     fetchUpcomingMovies();
   }, []);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
-
   const handleCardClick = (movieId) => {
-    if (!isLoggedIn) {
-      navigate('/login');
-    } else {
-      navigate(`/detailmovie/${movieId}`);
-    }
+    navigate(`/detailmovie/${movieId}`);
   };
 
   const scrollMovies = (direction) => {
