@@ -1,9 +1,7 @@
-// MovieList.jsx
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from '../api/datafilm';
 import requests from '../api/requests';
-import { auth, onAuthStateChanged } from '../firebaseConfig'; // Import Firebase auth
 import '../assets/style/MovieList.css';
 
 const categories = {
@@ -18,7 +16,6 @@ const categories = {
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [category, setCategory] = useState('All Films');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,25 +31,8 @@ const MovieList = () => {
     fetchMovies();
   }, [category]);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
-
   const handleCardClick = (movieId) => {
-    if (!isLoggedIn) {
-      navigate('/login');
-    } else {
-      navigate(`/detailmovie/${movieId}`);
-    }
+    navigate(`/detailmovie/${movieId}`);
   };
 
   const getGenres = (genre_ids) => {
